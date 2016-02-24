@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app>
+    <head>
+        <meta charset="UTF-8">
+        <title>GeneratingMessages</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+        <script src="controller.js"></script>
+        <link rel="stylesheet" href="syle.css">
+   </head>
+    <body>
+        <div ng-controller = "Messages">
+            <table>
+                <tr>
+                    <td>date</td>
+                    <td>event</td>
+                    <td>alert</td>
+                </tr>
+                <tr ng-repeat = "event in events">
+                    <td>{{event.date}}</td>
+                    <td>{{event.body}}</td>
+                    <td>{{event.alert}}</td>
+                 </tr>
+            </table>
+
+            <table class="white-border">
+                 <tr>
+                    <td class="blue" ng-click="sendMessage(1)">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                    <td class="red"  ng-click="sendMessage(2)">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                    <td class="green"  ng-click="sendMessage(3)">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                    <td class="yellow"  ng-click="sendMessage(4)">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                 </tr>
+            </table>
+
+         </div>
+    </body>
+</html>

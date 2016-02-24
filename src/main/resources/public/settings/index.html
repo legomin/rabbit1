@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html ng-app>
+    <head>
+        <meta charset="UTF-8">
+        <title>GeneratingMessages</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+        <script src="controller.js"></script>
+        <link rel="stylesheet" href="syle.css">
+   </head>
+    <body>
+        <div ng-controller = "Queques">
+            <table>
+                <tr>
+                    <td>user</td>
+                    <td>event</td>
+                    <td>alert</td>
+                </tr>
+                <tr ng-repeat = "event in events">
+                    <td>{{event.user}}</td>
+                    <td>{{event.event}}</td>
+                    <td>{{event.alert}}</td>
+                    <!--td><input type="submit" value="Delete" ng-onclick="deleteEvent({{event}})"></td-->
+                </tr>
+
+            </table>
+            <form ng-submit="saveQueques()">
+                <p>
+                    <select name="user" ng-model="user">
+                        <option>user1</option>
+                        <option>user2</option>
+                        <option>user3</option>
+                        <option>user4</option>
+                        <option>user5</option>
+                        <option>user6</option>
+                        <option>user7</option>
+                        <option>user8</option>
+                        <option>user9</option>
+                        <option>user10</option>
+                    </select>
+                    <select name="event" ng-model="event">
+                        <option>userEntry</option>
+                        <option>pushButton</option>
+                        <option>pushBlueButton</option>
+                        <option>pushRedButton</option>
+                        <option>pushGreenButton</option>
+                        <option>pushYellowButton</option>
+                    </select>
+
+                    Сообщение: <input type="text" ng-model="alert">
+                    <input type="submit" value="Save">
+                </p>
+           </form>
+         </div>
+    </body>
+</html>
